@@ -14,7 +14,7 @@ def findConnectingLine(coord1, coord2):
         return (coord1.y - coord2.y)/(coord1.x - coord2.x)*(x - coord1.x) + coord1.y
     return lineFunc
 
-
+# The sextants increase counterclockwise starting at the leftmost sextant
 def find_sextant(robot_pos, line_1, line_2, line_3):
     is_robot_under_line = lambda robot_pos, line: True if robot_pos.y < line(robot_pos.x) else False
     under_L1 = is_robot_under_line(robot_pos, line_1)
